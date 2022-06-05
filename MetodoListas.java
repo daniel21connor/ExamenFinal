@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-
+//metodo para registrar
 public class MetodoListas {
     List<String> lisNombreDepar = new ArrayList<>();
         List<String> cantidadLis = new ArrayList<>();
@@ -50,6 +50,7 @@ public class MetodoListas {
        String uwu=scanner.next();
       cantidadLis.add(uwu);
      }
+     //metodo para mostrar
      public void mostrarCantidad(){
       
             for (int i=1; i<cantidadLis.size();i++){
@@ -82,6 +83,33 @@ public class MetodoListas {
                 }   
             } 
         }
-     
-     
+       //metodo vaciar o limpiar lista
+      public void vaciar(){
+      lisNombreDepar.clear();
+      
+      
+      }
+       public void vaciarcanti(){
+     cantidadLis.clear();
+      
+      
+      }
+        public void vaciarcabe(){
+      cabecera.clear();
+      
+    
+      }
+        //esto sirve para llamar al registr, sin esto daria error o literlmente no almacene nada
+      public List<String> getLisNombreDepar() {
+        return lisNombreDepar;
+    }
+
+    public List<String> getCantidadLis() {
+        return cantidadLis;
+    }
+
+    public List<String> getCabecera() {
+        return cabecera;
+    }
+    
 }
