@@ -1,6 +1,8 @@
 
 package menprincipal;
 
+import static menprincipal.MetodoListas.scanner;
+
 
 public class MetodoArrays {
      private String [] departamentos=new String[24];
@@ -77,4 +79,30 @@ public class MetodoArrays {
                 }   
             } 
         }      
+    public void busqueda(){
+   String busque=null;
+     int posicion =1;
+   int resultado=posicion;
+System.out.println("ingrese el departamento");
+ busque=scanner.next();
+
+   while(posicion<departamentos.length){
+       if (departamentos.equals(busque))
+       {
+           resultado=posicion;
+     posicion++;
+           break;
+            
+   }else{
+           
+           posicion++;
+       }
+        }if(resultado<=(departamentos.length+1)){
+       System.out.println("EL departamento "+ busque+" fue encontrado en la posicion "+ "---"+resultado+"----" );     
+            
+        }else {
+          System.out.println("No Se encontro");    
+        }
+     }
+   
 }
