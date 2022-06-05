@@ -111,5 +111,20 @@ public class MetodoListas {
     public List<String> getCabecera() {
         return cabecera;
     }
+    //metodo buscar
+     public void BuscarDepa(){
+   System.out.println(" numero departamento que buscar");
+int depa=scanner.nextInt();
+   int posicion=lisNombreDepar.indexOf(depa);
+    if (posicion <=numero.indexOf(posicion))
+         System.out.println(" __Departamento__"+ lisNombreDepar);
+         else{
+             System.out.println(" __Departamento__"+ lisNombreDepar );
+         
+                 } 
+     
+     
+     } 
+    
     
 }
