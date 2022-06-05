@@ -3,63 +3,65 @@ package menprincipal;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+import static menprincipal.MetodoListas.scanner;
 
 public class MenuListas {
-    
-         public void menuLista(int opcion){
+    static  Scanner leer=new Scanner (System.in);
+    public void menuLista(int opcion){
         
         List<MetodoListas> lis_Nombre = new ArrayList<>();
-      MetodoListas datos = new NombreDepartamentoArraysVectores();
+       MetodoListas datos = new MetodoListas();
         do {
          System.out.println( "1" + " ingresar datos del Departamento");
          System.out.println( "2 "+ "mostrar Departamentos");
-         System.out.println( "3" + " Buscar Depa");
-         System.out.println( "4" + " Mostrar Cabecera Y Departamentos");  
-         System.out.println( "5" + " Mostrar Datos Juntos");   
-         System.out.println( "6" + " salir");   
+         System.out.println( "3" + " Mostrar todos los datos juntos");
+         System.out.println( "4" + " vaciar Departamento");
+         System.out.println( "5" + " vaciar todo");   
+         System.out.println( "6" + " Buscar departamento");   
+         System.out.println( "7" + " salir");   
           opcion = scanner.nextInt();
            switch(opcion){
 
                case 1: 
-                  System.out.println("Escribe El nombre del Departamento");
-                  String date=scanner.next();
-                   System.out.println("Escribe La Cabecera");
-                  String da=scanner.next();
-                   System.out.println("Escribe El Numero De municipios");
-                  String de=scanner.next();
-                  datos.registroDepa(date);
-                  datos.registroCabercera(da);
-                  datos.registroMunicipio(de);
+                   datos.Departamento();
+                   datos.cantidad();
+                   datos.cabecera();
+                
                    break;
                case 2:
-                  datos.mostrarDepa();
+                   datos.mostrarDepartamento();
                        break;
                case 3:
-                  datos.busqueda();
+                   datos.mostrarDepartamento();
+                   datos.mostrarCantidad();
+                   datos.mostrarcabecera();
                        break;
                case 4:
-                  datos.mostrarcabecera();
-                 datos.mostrarDepa();
+                   datos.vaciar();
                        break;
                
                case 5:
-                  datos.mostrarDepa();
-                 datos.mostrarcabecera();
-                 datos.mostrarmuni();
+                   datos.vaciarcabe();
+                   datos.vaciar();
+                   datos.vaciarcanti();
                        break;
-             
+               case 6:  
+               datos.BuscarDepa();
+                   break;
+               
+               
+               
+               
+               
+               
+               
+               
+               
                
            }
-}    while (opcion !=6);
+}    while (opcion !=7);
 }
-    
-    
-    
-}
-
-    
-    
-    
     
 }
 
